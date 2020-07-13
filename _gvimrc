@@ -1,0 +1,78 @@
+
+" Maximize on startup (Win32)
+if has("win32")
+    autocmd GUIEnter * simalt ~x
+    " Put swap files in temp
+    set directory=c:/windows/temp/vim//
+    " I have GNU Grep installed.
+    set grepprg=grep\ -nH
+    set guifont=Consolas_for_Powerline_FixedD:h9
+    " set guifont=Liberation_Mono:h8:cANSI:qDRAFT
+    let g:molokai_original=1
+    let g:Powerline_symbols="fancy"
+elseif has("unix")
+    set guifont=Consolas\ for\ Powerline\ 9
+    let g:Powerline_symbols="fancy"
+    set t_Co=256
+    let g:rehash256=1
+endif
+
+colorscheme base16-ocean
+
+set linespace=0
+set fillchars=""
+
+"set number
+
+" Tab/indent settings
+set autoindent
+set expandtab
+set smarttab
+set cino=:4,l1,g0,t0,j1,(0,ws,Ws
+set tabstop=4
+set shiftwidth=4
+
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
+
+let c_no_bracket_error=1
+" Slashes in paths everywhere
+set shellslash
+
+" Various GUI/editing options
+set cpoptions+=$
+set backspace=indent,eol,start
+set nowrap
+set ruler
+set showcmd
+set showmode
+set wildmenu
+syntax on
+
+set nobackup
+set nowritebackup
+set noundofile
+set noswapfile
+
+set laststatus=2
+set cmdheight=1
+
+" NERDTree config
+let NERDTreeShowBookmarks=1
+nmap <F10> :NERDTreeToggle<CR>
+
+" Tagbar config
+nmap <F8> :TagbarToggle<CR>
+
+nnoremap <CR> :nohl<CR><CR>
+
+nnoremap <silent> <F1> :!build <CR>
+nnoremap <silent> <F2> :!a <CR>
+
+"let g:cpp_class_scope_highlight = 1
+"let g:cpp_experimental_simple_template_highlight = 1
+"let g:cpp_experimental_template_highlight = 1
+"let g:cpp_concepts_highlight = 1
+
