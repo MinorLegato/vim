@@ -28,7 +28,7 @@ set fillchars=""
 set autoindent
 set expandtab
 set smarttab
-set cino=:4,l1,g0,t0,j1,(0,ws,Ws
+set cino=:4,l1,g0,t0,j1,J1,(0,ws,Ws
 set tabstop=4
 set shiftwidth=4
 
